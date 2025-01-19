@@ -1,9 +1,97 @@
-.name1{
-    font-family: "Gemunu Libre", serif;
-    font-weight: 100;
-    color: blueviolet;
-    font-size: 33px;
+/* Estilo do nome no header */
+.name1 {
+  font-family: "Gemunu Libre", serif;
+  font-weight: 100;
+  color: blueviolet;
+  font-size: 33px;
 }
+
+/* Estilo do header fixo */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Mantém o alinhamento correto */
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, 0.61) ; /* Adiciona fundo para evitar sobreposição com o conteúdo */
+  z-index: 1000; /* Garante que o header fique acima do conteúdo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombrinha opcional */
+  padding: 2px 0;
+  backdrop-filter: blur(5px);
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  font-family: "Gemunu Libre", serif;
+  color: blueviolet;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  position: relative;
+  padding: 25px 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu a::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: blueviolet;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: darkviolet; /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilo para os ícones de contato */
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gemunu Libre", serif;
+  color: blueviolet;
+  font-size: 20px;
+  gap: 13px;
+  cursor: pointer;
+}
+
+.contacts img {
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animações suaves */
+}
+
+.contacts img:hover {
+  transform: translateY(-10px); /* Eleva os ícones */
+  filter: brightness(1.2); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Espaçamento para o conteúdo abaixo do header fixo */
+main {
+  margin-top: 100px; /* Espaço para não sobrepor o conteúdo do header fixo */
+  padding: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
 
 .container{
     display: flex;
@@ -13,79 +101,7 @@
     width: 100vw;
 }
 
-header{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    width: 100vw; 
-}
 
-
-
-.menu{
-    display: flex;
-    gap: 20px;
-    height: 100%;
-    width: 100%;
-    font-family: "Gemunu Libre", serif;
-    color: blueviolet;
-    font-size: 20px;
-    
-
-}
-
-  
-  .menu a {
-    
-    position: relative;
-    padding: 25px 12px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  /* .menu a:hover {
-    color: #007bff; 
-  }
-   */
-  .menu a::after {
-    content: ""; 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: blueviolet;
-    transition: width 0.3s ease;
-  }
-  
-  .menu a:hover::after {
-    width: 100%;
-  }
-  
-
-.contacts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Gemunu Libre", serif;
-    color: blueviolet;
-    font-size: 20px;
-    gap: 13px;
-    border: solid black 10px;
-    cursor: pointer;
-  }
-  
-  .instagram, .whatsapp, .linkedin, .github {
-    height: 40px;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave */
-  }
-  
-  .contacts img:hover {
-    transform: translateY(-10px);
-    filter: brightness(1.2);
-  }
-  
 
 .Welcome{
     display: flex;
@@ -220,9 +236,9 @@ header{
     border-radius: 15px;
 }
 
-.textapresentation{
+/* .textapresentation{
     color:blueviolet;
-    height: 40vh;
+    height: 75vh;
     width: 35vw;
     display: flex;
     align-items: center;
@@ -231,7 +247,92 @@ header{
     font-family: "Gemunu Libre", serif;
     gap: 20px;
     font-size: 23px;
+    border: solid blueviolet 2px;
+    text-align: center;
+ 
+    border-radius: 40px;
+    
+} */
+
+
+.textapresentation {
+  color: blueviolet;
+  height: 55vh;
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Gemunu Libre", serif;
+  gap: 20px;
+  font-size: 20px;
+  border: 1px solid blueviolet;
+  text-align: center;
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  border-radius: 1000px;
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
+
+.textapresentation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: blueviolet; /* Adiciona um fundo ao pseudo-elemento */
+  border: 5px solid blueviolet;
+  z-index: -1; /* Faz o pseudo-elemento aparecer por baixo do conteúdo */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  border-radius: 1000px;
+}
+
+.textapresentation:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.textapresentation:hover {
+  background-color: transparent; /* Permite que o pseudo-elemento colorido apareça */
+  color: #007bff;
+  border-color: #007bff;
+  border: solid #007bff 3px;
+}
+
+.texto {
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  overflow: hidden; /* Garante que o pseudo-elemento fique dentro dos limites */
+  display: inline-block; /* Ajusta o efeito ao texto */
+  transition: color 0.5s ease;
+}
+
+.texto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: blueviolet; /* Fundo animado do texto */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  z-index: -1; /* Faz o pseudo-elemento aparecer atrás do texto */
+  border-radius: 1000px;
+}
+
+.textapresentation:hover .texto::before {
+  transform: scaleX(1); /* Expande o fundo do texto */
+  transform-origin: left;
+}
+
+.textapresentation:hover .texto {
+  color:  #007bff; /* Ajusta a cor do texto durante o hover */
+}
+
+
 
 .texto{
     text-align: center;
