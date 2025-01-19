@@ -18,10 +18,7 @@ header{
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    width: 100vw;
-    
-    
-    
+    width: 100vw; 
 }
 
 
@@ -38,7 +35,36 @@ header{
 
 }
 
-.contacts{
+  
+  .menu a {
+    
+    position: relative;
+    padding: 25px 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* .menu a:hover {
+    color: #007bff; 
+  }
+   */
+  .menu a::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: blueviolet;
+    transition: width 0.3s ease;
+  }
+  
+  .menu a:hover::after {
+    width: 100%;
+  }
+  
+
+.contacts {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,20 +73,19 @@ header{
     font-size: 20px;
     gap: 13px;
     border: solid black 10px;
-}
-
-.instagram{
+    cursor: pointer;
+  }
+  
+  .instagram, .whatsapp, .linkedin, .github {
     height: 40px;
-}
-.whatsapp{
-    height: 40px;
-}
-.linkedin{
-    height: 40px;
-}
-.github{
-    height: 40px;
-}
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave */
+  }
+  
+  .contacts img:hover {
+    transform: translateY(-10px);
+    filter: brightness(1.2);
+  }
+  
 
 .Welcome{
     display: flex;
@@ -79,12 +104,33 @@ header{
     font-size: 25px;
 }
 
+
+  
+.bemvindo h3::after {
+    content: "|";
+    right: -7px;
+    animation: blink 0.50s infinite step-end;
+}
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
 .tittlewelcome{
 
     font-size: 55px;
 }
 
-.btnwelcome{
+.btnwelcome {
     height: 60px;
     width: 150px;
     font-family: "Gemunu Libre", serif;
@@ -92,7 +138,37 @@ header{
     background-color: black;
     border: solid blueviolet 2px;
     font-size: 20px;
-}
+    position: relative;
+    /* overflow: hidden;  Garante que o pseudo-elemento não ultrapasse as bordas do botão  */
+    transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .btnwelcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid blueviolet;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+  }
+  
+  .btnwelcome:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .btnwelcome:hover {
+    background-color: blueviolet;
+    color:#007bff;
+    border-color:#007bff;
+  }
+  
+  
 
 .card-ola{
     width: 100vw;
