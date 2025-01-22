@@ -4,14 +4,14 @@
   
 <div class="container">
 
-    <header>
+    <header class="cabçalho">
         <div class="name">
         <h1 class="name1">Mateus Moliterno</h1>
         </div>
 
     <nav>
-
-      <ul class="menu">
+      <button class="hamburger" (click)="toggleMenu()">☰</button>
+      <ul class="menu" [class.open]="isMenuOpen">
 
         <a>Inicio</a>
         <a>Projetos</a>
@@ -55,7 +55,7 @@
 
       <div class="image">
 
-        <img src="./.././../assets/figura-consultoria-e-governanca-de-ti-scitis.png" alt="aaaaa">
+        <img class="imagem1" src="./.././../assets/figura-consultoria-e-governanca-de-ti-scitis.png" alt="aaaaa">
 
       </div>
 
