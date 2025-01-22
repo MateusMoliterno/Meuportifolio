@@ -13,7 +13,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background:rgba(0, 0, 0, 0.301) ;
+  background:rgba(0, 0, 0, 0.726) ;
   z-index: 1000;
   padding: 2px 0;
   backdrop-filter: blur(5px);
@@ -288,6 +288,135 @@ header {
 .textapresentation:hover .texto::before {
   transform: scaleX(1); /* Expande o fundo do texto */
   transform-origin: left;
+}
+.hamburger{
+  display: none;
+}
+
+
+@media (max-width: 1008px) {
+  .menu{
+    display: none;
+  }
+
+  .contacts{
+    display: none;
+  }
+
+  .card-ola{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .Welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .sobremim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .textapresentation{
+    width: 43vw;
+    height: 100vh;
+  }
+  
+  
+}
+
+@media (max-width: 918px) {
+    .textapresentation{
+      width: 43vw;
+      height: 43vh;
+    }
+}
+
+@media (max-width: 1182px){
+  .textapresentation{
+    width: 43vw;
+    height: 43vh;
+  }
+}
+@media (max-width: 480px){
+  .textapresentation{
+    width: 82vw;
+    height: 39vh;
+  }
+}
+@media (max-width: 394px){
+  .textapresentation{
+    width: 93vw;
+    height: 37vh;
+    font-size: 18px;
+  }
+  .imagem1{
+    width: 104vw;
+  }
+
+  .welcome{
+    width: 100vw;
+  }
+
+  .imagesobremim{
+    width: 100vw;
+    height: 50vh;
+  }
+  .name1{
+    display: flex;
+  }
+
+    .menu {
+    display: none; /* Esconde o menu no mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 240px;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+    width: 35vw;
+    height: 24vh;
+    padding: 1rem;
+    backdrop-filter: blur(10px); /* Efeito de embaçamento */
+
+    
+  }
+
+  .menu.open {
+    display: flex; /* Mostra o menu ao clicar no botão hambúrguer */
+  }
+
+  .hamburger {
+    display: block; /* Exibe o botão hambúrguer */
+    font-size: 20px;
+    width: 8vw;
+    height: 3vh;
+    background-color: rgba(137, 43, 226, 0.712);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Certifica-se de que o botão fique acima do menu */
+    margin-left: 120px;
+    
+  }
+
+  .menu a {
+    padding: 0.5rem 0; /* Ajusta o espaçamento entre os links no menu mobile */
+    text-align: center; /* Centraliza os links no mobile */
+    background-color: rgba(137, 43, 226, 0.247);
+    border-radius: 8px;
+  }
+  nav{
+    padding: 8px 0 8px 0;
+    margin: 0;
+    
+   
+    
+  }
+
 }
 
 
