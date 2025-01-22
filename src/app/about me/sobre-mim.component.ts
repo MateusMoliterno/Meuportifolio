@@ -7,5 +7,10 @@ import { ScrollAnimationDirective } from '../directives/scroll-animation.directi
   styleUrl: './sobre-mim.component.css'
 })
 export class SobreMimComponent {
+  isMenuOpen = false; // Estado inicial: menu fechado
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; // Alterna o estado do menu
+  }
 
 }
