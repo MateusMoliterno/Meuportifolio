@@ -419,4 +419,77 @@ header {
 
 }
 
+@media (max-width:320px){
+    .name1{
+      width: 65vw;
+      height: 9vh;
+      /* background-color: blue; */
+      font-size: 30px;
+    }
+
+    .hamburger{
+      /* background-color: red */
+      display: flex;
+      margin-right: 60px;
+      /* width: 500vw; */
+      height: 5.5vh;
+    
+    }
+    nav{
+
+      /* background-color: #007bff; */
+      width: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    header{
+      display: flex;
+    }
+
+    .card-ola{
+      margin-top: 80px;
+      gap: 50px;
+    }
+
+    .sobremim{
+      margin-top: 250px;
+      gap: 50px;
+    }
+
+    .textapresentation{
+      width: 86vw;
+      height:53vh ;
+      font-size: 14px;
+    }
+
+    .sobremim{
+      /* background-color: #007bff; */
+      height: 120vh;
+    }
+    .welcome{
+      padding: 0;
+      margin: 0;
+      gap: 0;
+    }
+
+    .menu{
+      height: 46vh;
+      margin-left: -20px;
+      width: 30vw;
+      align-items: center;
+      /* background-color: #007bff; */
+    }
+
+    a{
+      font-size: 15px;
+      width: 25vw;
+
+    }
+
+}
+
+
 
