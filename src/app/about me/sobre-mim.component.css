@@ -1,8 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -294,7 +302,7 @@ header {
 }
 
 
-@media (max-width: 1008px) {
+/* @media screen and (max-width: 1008px) {
   .menu{
     display: none;
   }
@@ -326,9 +334,9 @@ header {
   }
   
   
-}
+} */
 
-@media (max-width: 918px) {
+/* @media (max-width: 918px) {
     .textapresentation{
       width: 43vw;
       height: 43vh;
@@ -340,154 +348,176 @@ header {
     width: 43vw;
     height: 43vh;
   }
-}
-@media (max-width: 480px){
-  .textapresentation{
-    width: 82vw;
-    height: 39vh;
-  }
-}
-@media (max-width: 394px){
-  .textapresentation{
-    width: 93vw;
-    height: 37vh;
-    font-size: 18px;
-  }
-  .imagem1{
-    width: 104vw;
-  }
+} */
 
-  .welcome{
-    width: 100vw;
-  }
-
-  .imagesobremim{
-    width: 100vw;
-    height: 50vh;
-  }
-  .name1{
-    display: flex;
-  }
-
-    .menu {
-    display: none; /* Esconde o menu no mobile */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 240px;
-    background-color: rgba(0, 0, 0, 0.726);
-    border-radius: 10px;
-    width: 35vw;
-    height: 24vh;
-    padding: 1rem;
-    backdrop-filter: blur(10px); /* Efeito de embaçamento */
-
-    
-  }
-
-  .menu.open {
-    display: flex; /* Mostra o menu ao clicar no botão hambúrguer */
-  }
-
-  .hamburger {
-    display: block; /* Exibe o botão hambúrguer */
-    font-size: 20px;
-    width: 8vw;
-    height: 3vh;
-    background-color: rgba(137, 43, 226, 0.712);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000; /* Certifica-se de que o botão fique acima do menu */
-    margin-left: 120px;
-    
-  }
-
-  .menu a {
-    padding: 0.5rem 0; /* Ajusta o espaçamento entre os links no menu mobile */
-    text-align: center; /* Centraliza os links no mobile */
-    background-color: rgba(137, 43, 226, 0.247);
-    border-radius: 8px;
-  }
-  nav{
-    padding: 8px 0 8px 0;
-    margin: 0;
-    
-   
-    
-  }
-
-}
-
-@media (max-width:320px){
+@media screen and (min-width:320px) and (max-width:420px){
     .name1{
-      width: 65vw;
-      height: 9vh;
-      /* background-color: blue; */
+      width: 50vw;
+      height: 3vh;
       font-size: 30px;
-    }
-
-    .hamburger{
-      /* background-color: red */
-      display: flex;
-      margin-right: 60px;
-      /* width: 500vw; */
-      height: 5.5vh;
-    
-    }
-    nav{
-
-      /* background-color: #007bff; */
-      width: 20vw;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      /* background-color: beige; */
+    }
+    
+
+    
+
+    .hamburger{
+      display: flex;
+      /* margin-right: -60px; */
+      height: 4vh;
+      width: 5vw;
+      display: block; 
+      background-color: rgba(137, 43, 226, 0.712);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      /* z-index: 1000; */
+    
+    }
+
+    nav{
+      width: 10vw;
+      height: 4vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* padding: 8px 0 8px 0; */
+      margin: 0;
+      /* background-color: #007bff; */
+      /* background-color: #007bff; */
+      position: absolute;
+      left: 365px;
+      
 
     }
 
     header{
       display: flex;
+      height: 8vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background:rgba(0, 0, 0, 0.726) ;
+      /* z-index: 1000; */
+      /* padding: 2px 0; */
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center
+
     }
 
+
     .card-ola{
-      margin-top: 80px;
-      gap: 50px;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 135px;
+      gap: 100px;
     }
 
     .sobremim{
       margin-top: 250px;
       gap: 50px;
+      display: flex;
+    
     }
 
     .textapresentation{
-      width: 86vw;
-      height:53vh ;
+      display: flex;
+      width: 75vw;
+      height:60vh;
       font-size: 14px;
+      
     }
 
     .sobremim{
       /* background-color: #007bff; */
-      height: 120vh;
+      height: 98vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background-color: #007bff; */
+      margin-top: 200px;
     }
-    .welcome{
-      padding: 0;
-      margin: 0;
-      gap: 0;
+    .Welcome{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100vw;
     }
 
     .menu{
-      height: 46vh;
-      margin-left: -20px;
+      height: 35vh;
       width: 30vw;
       align-items: center;
-      /* background-color: #007bff; */
+      justify-content: center;
+      display: none;
+      flex-direction: column;
+      /* background-color: rgba(0, 0, 0, 0.726);*/
+      background-color: rgba(69, 5, 143, 0.418);
+      border-radius: 10px;
+      position: absolute;
+      top:50px;
+      right: 10px;
+      backdrop-filter: blur(10px);
+      padding: 1rem;
     }
 
-    a{
+    .menu a {
+      padding: 0.5rem 0; /* Ajusta o espaçamento entre os links no menu mobile */
+      text-align: center; /* Centraliza os links no mobile */
+      background-color: blueviolet;
+      color: black;
+      border-radius: 8px;
       font-size: 15px;
       width: 25vw;
 
     }
+
+    .menu a::after {
+      content: ""; 
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      
+      background-color: rgb(133, 33, 103);
+      transition: width 0.3s ease;
+    }
+    
+    .menu a:hover::after {
+      width: 100%;
+    }
+    
+    .menu a:hover {
+      color: black;
+    }
+
+    
+
+    .contacts{
+      display: none;
+    }
+
+    .imagem1{
+      width: 104vw;
+    }
+
+    .imagesobremim{
+      width: 100vw;
+      height: 50vh;
+    }
+
+    .menu.open {
+      display: flex; /* Mostra o menu ao clicar no botão hambúrguer */
+    }
+  
 
 }
 
