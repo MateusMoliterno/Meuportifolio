@@ -89,8 +89,8 @@ header {
 }
 
 .contacts img:hover {
-  transform: translateY(-10px); /* Eleva os ícones */
-  filter: brightness(1.2); /* Aumenta o brilho ao passar o mouse */
+  transform: translateY(-10px);
+  filter: brightness(1.2);
 }
 
 .card-ola{
@@ -103,9 +103,9 @@ header {
   font-family: "Gemunu Libre", serif;
   color: blueviolet;
   opacity: 0;
-  transform: translateY(20px); /* Movida para baixo */
+  transform: translateY(20px);
   animation: aparecer 1s ease-out forwards;
-  animation-delay: 0.40s; /* Delay de 2 segundos */
+  animation-delay: 0.40s;
 }
 
 
@@ -162,7 +162,6 @@ header {
     border: solid blueviolet 2px;
     font-size: 20px;
     position: relative;
-    /* overflow: hidden;  Garante que o pseudo-elemento não ultrapasse as bordas do botão  */
     transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
     cursor: pointer;
   }
@@ -194,11 +193,11 @@ header {
 @keyframes aparecer {
     from {
       opacity: 0;
-      transform: translateY(20px); /* Começa mais abaixo */
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
-      transform: translateY(0); /* Volta para a posição original */
+      transform: translateY(0);
     }
   }
 
@@ -235,7 +234,7 @@ header {
   font-size: 20px;
   border: 1px solid blueviolet;
   text-align: center;
-  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  position: relative;
   border-radius: 1000px;
   transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
@@ -247,9 +246,9 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: blueviolet; /* Adiciona um fundo ao pseudo-elemento */
+  background-color: blueviolet;
   border: 5px solid blueviolet;
-  z-index: -1; /* Faz o pseudo-elemento aparecer por baixo do conteúdo */
+  z-index: -1;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;
@@ -262,19 +261,19 @@ header {
 }
 
 .textapresentation:hover {
-  background-color: transparent; /* Permite que o pseudo-elemento colorido apareça */
+  background-color: transparent; 
   color: #007bff;
   border-color: #007bff;
   border: solid #007bff 3px;
 }
 .textapresentation:hover .texto {
-  color:  #007bff; /* Ajusta a cor do texto durante o hover */
+  color:  #007bff; 
 }
 
 .texto {
-  position: relative; /* Necessário para posicionar o pseudo-elemento */
-  overflow: hidden; /* Garante que o pseudo-elemento fique dentro dos limites */
-  display: inline-block; /* Ajusta o efeito ao texto */
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
   transition: color 0.5s ease;
   text-align: center;
 }
@@ -286,16 +285,16 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: blueviolet; /* Fundo animado do texto */
+  background-color: blueviolet;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;
-  z-index: -1; /* Faz o pseudo-elemento aparecer atrás do texto */
+  z-index: -1;
   border-radius: 1000px;
 }
 
 .textapresentation:hover .texto::before {
-  transform: scaleX(1); /* Expande o fundo do texto */
+  transform: scaleX(1);
   transform-origin: left;
 }
 .hamburger{
@@ -386,10 +385,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      /* padding: 8px 0 8px 0; */
       margin: 0;
-      /* background-color: #007bff; */
-      /* background-color: #007bff; */
       position: absolute;
       left: 365px;
       
@@ -403,8 +399,6 @@ header {
       top: 0;
       left: 0;
       background:rgba(0, 0, 0, 0.726) ;
-      /* z-index: 1000; */
-      /* padding: 2px 0; */
       backdrop-filter: blur(5px);
       align-items: center;
       justify-content: center
@@ -435,13 +429,11 @@ header {
     }
 
     .sobremim{
-      /* background-color: #007bff; */
       height: 98vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* background-color: #007bff; */
       margin-top: 220px;
       gap: 70px;
     }
@@ -460,7 +452,6 @@ header {
       justify-content: center;
       display: none;
       flex-direction: column;
-      /* background-color: rgba(0, 0, 0, 0.726);*/
       background-color: rgba(69, 5, 143, 0.418);
       border-radius: 10px;
       position: absolute;
@@ -471,8 +462,8 @@ header {
     }
 
     .menu a {
-      padding: 0.5rem 0; /* Ajusta o espaçamento entre os links no menu mobile */
-      text-align: center; /* Centraliza os links no mobile */
+      padding: 0.5rem 0;
+      text-align: center;
       background-color: blueviolet;
       color: black;
       border-radius: 8px;
@@ -517,10 +508,8 @@ header {
     }
 
     .menu.open {
-      display: flex; /* Mostra o menu ao clicar no botão hambúrguer */
+      display: flex;
     }
-  
-
 }
 
 
